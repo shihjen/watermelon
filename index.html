@@ -94,11 +94,24 @@
       pointer-events: none;
       user-select: none;
       filter: drop-shadow(0 8px 6px rgba(0,0,0,0.18));
+      transition: transform 0.5s ease;
     }
 
     @keyframes float {
       0%, 100% { transform: translateY(0) rotate(0deg); }
       50% { transform: translateY(-6px) rotate(1.2deg); }
+    }
+
+    /* Opening animation */
+    @keyframes openWatermelon {
+      0% { transform: scale(1) rotate(0deg); }
+      30% { transform: scale(1.1) rotate(-10deg); }
+      60% { transform: scale(1.1) rotate(10deg); }
+      100% { transform: scale(1) rotate(0deg); }
+    }
+
+    .opening img {
+      animation: openWatermelon 0.5s ease forwards;
     }
 
     .watermelon:nth-child(1) { animation-delay: 0s; }
@@ -130,7 +143,7 @@
       background: var(--paper);
       border-radius: 18px;
       padding: 1.2rem 1.2rem 1.4rem;
-      max-width: 420px;
+      max-width: 600px;
       width: 100%;
       position: relative;
       box-shadow: 0 25px 60px rgba(0,0,0,0.35);
@@ -199,7 +212,7 @@
       transform: scale(1.1);
     }
 
-    /* Floating hearts / petals */
+    /* Floating petals */
     .heart {
       position: fixed;
       font-size: 18px;
@@ -234,7 +247,7 @@
       user-select: none;
     }
 
-    /* Subtle hint for first interaction */
+    /* Tap hint */
     .tap-hint {
       position: fixed;
       bottom: 70px;
@@ -261,33 +274,33 @@
 
   <div class="wrapper">
     <h1>Happy Birthday</h1>
-
     <div class="grid">
-      <div class="watermelon" data-img="asset/img/watermelon1.jpg" data-caption="A tiny moment" data-text="I still remember the way you smiled that day. It stayed with me longer than you know. Some conversations feel light, some feel deep… talking to you feels like both." data-date="Memory #1">
+      <!-- Watermelons -->
+      <div class="watermelon" data-img="asset/img/watermelon11g.gif" data-caption="【身体健康】" data-text="祝福你身体健康，精力充沛，每天都活力满满，随时准备外出到处撒欢。尽情去做你喜欢的事，无论是工作，还是生活中到处探险，都能开心享受每一刻。" data-date="Wish #1">
         <img src="asset/img/watermelon0.png" alt="Watermelon" />
       </div>
-      <div class="watermelon" data-img="asset/img/watermelon5.jpg" data-caption="Just us talking" data-text="Some conversations feel light, some feel deep… talking to you feels like both." data-date="Memory #2">
+      <div class="watermelon" data-img="asset/img/watermelon12g.gif" data-caption="【科研顺利】" data-text="在科研路上, 祝福你能够保持热爱，持续在探索过程中找到乐趣。不急不徐做出那个让自己骄傲的成果。唯一嘱咐：肚子饿了就要快快去吃饭。被”hangry mode”吓到的cultures会长得不健康。" data-date="Wish #2">
         <img src="asset/img/watermelon0.png" alt="Watermelon" />
       </div>
-      <div class="watermelon" data-img="asset/img/watermelon4.jpg" data-caption="That quiet moment" data-text="It was calm, gentle, and strangely comforting. I think that’s when I realized I feel safe around you." data-date="Memory #3">
+      <div class="watermelon" data-img="asset/img/watermelon13g.gif" data-caption="【步步高升】" data-text="事业蒸蒸日上，步步高升！愿你在科研发表上一路开挂，期刊论文投稿百发百中，审稿人乖乖点头、没有疑问 。也祝你持续多产，在各大研讨会中分享成果，展示你的努力和才华，让大家见识看看 “冬瓜虽小，之气却大”。" data-date="Wish #3">
         <img src="asset/img/watermelon0.png" alt="Watermelon" />
       </div>
-      <div class="watermelon" data-img="asset/img/watermelon.png" data-caption="Your laughter" data-text="Your laugh is unfairly contagious. Every time I hear it, my mood changes instantly." data-date="Memory #4">
+      <div class="watermelon" data-img="asset/img/watermelon14g.gif" data-caption="【Hangry不上线】" data-text="吃得好，心情好，“hangry mode”永不上线 。生活难免有低潮，愿美食在每个不如意的时刻都能给你一点治愈 。Stay happy & slurp lots of good stuff in life!" data-date="Wish #4">
         <img src="asset/img/watermelon0.png" alt="Watermelon" />
       </div>
-      <div class="watermelon" data-img="asset/img/watermelon.png" data-caption="Something simple" data-text="It wasn’t a big moment. Just something ordinary. But with you, even ordinary feels special." data-date="Memory #5">
+      <div class="watermelon" data-img="asset/img/watermelon.png" data-caption="Something simple" data-text="It wasn’t a big moment..." data-date="Memory #5">
         <img src="asset/img/watermelon0.png" alt="Watermelon" />
       </div>
-      <div class="watermelon" data-img="asset/img/watermelon.png" data-caption="Late thoughts" data-text="Sometimes I catch myself smiling at my phone for no reason… then I realize it’s because of you." data-date="Memory #6">
+      <div class="watermelon" data-img="asset/img/watermelon15g.gif" data-caption="【夜夜好眠】" data-text="你说过你比较浅眠，容易被吵醒。所以祝福你每晚都能安稳入睡，一觉睡到天亮, 精神百倍。还有还有，不要像乐乐一样熬夜黑眼圈，要早点休息啦, 周末也一样。" data-date="Wish #5">
         <img src="asset/img/watermelon0.png" alt="Watermelon" />
       </div>
-      <div class="watermelon" data-img="asset/img/watermelon2.jpg" data-caption="Grateful" data-text="You probably don’t realize how much brighter you make things around you." data-date="Memory #7">
+      <div class="watermelon" data-img="asset/img/watermelon16g.gif" data-caption="【一路顺遂】" data-text="祝福你持续热爱生活。在探索世界、周游各地的旅途中一路平安顺遂。也愿你每一次旅行都收获新奇与感动，遇到的人，事，物与风景，都能让你乐而自得，留下美好回忆。" data-date="Wish #6">
         <img src="asset/img/watermelon0.png" alt="Watermelon" />
       </div>
-      <div class="watermelon" data-img="asset/img/watermelon.png" data-caption="A small wish" data-text="I hope you get all the gentleness and care you give to others, returned to you tenfold." data-date="Memory #8">
+      <div class="watermelon" data-img="asset/img/watermelon17g.gif" data-caption="【灵感源源不绝】" data-text="不管是在寻找灵感，还是放空自己、留白思考，愿你在太空漂浮的时刻都不被打扰。灵感如星光般源源不断，闪烁在你的脑海里，点亮每一个创意的瞬间。愿你的心灵遨游无边，每一次灵感的降临都能带来惊喜和满足。" data-date="Wish #7">
         <img src="asset/img/watermelon0.png" alt="Watermelon" />
       </div>
-      <div class="watermelon" data-img="asset/img/watermelon3.jpg" data-caption="Birthday note" data-text="Happy Birthday. I don’t know where life will go, but I’m really thankful our paths crossed." data-date="Memory #9">
+      <div class="watermelon" data-img="asset/img/watermelon3.jpg" data-caption="Birthday note" data-text="Happy Birthday. I’m thankful our paths crossed." data-date="Memory #9">
         <img src="asset/img/watermelon0.png" alt="Watermelon" />
       </div>
     </div>
@@ -297,12 +310,10 @@
   <div class="modal" id="modal">
     <div class="memory-card">
       <button class="close-btn" id="closeBtn">×</button>
-
       <div class="polaroid">
         <img id="modalImg" src="" alt="Memory image" />
         <div class="caption" id="modalCaption"></div>
       </div>
-
       <div class="memory-text" id="modalText"></div>
       <div class="memory-date" id="modalDate"></div>
     </div>
@@ -313,80 +324,113 @@
   <div class="tap-hint" id="tapHint">Tap once to enable music</div>
 
   <script>
-    // Gentle floating micro-movement
-    document.querySelectorAll('.watermelon').forEach(melon => {
-      setInterval(() => {
-        const dx = (Math.random() - 0.5) * 1.5;
-        const dy = (Math.random() - 0.5) * 1.5;
-        const rot = (Math.random() - 0.5) * 0.8;
-        melon.style.transform = `translate(${dx}px, ${dy}px) rotate(${rot}deg)`;
-      }, 1800 + Math.random() * 1200);
-    });
+  // Floating watermelon micro-movement
+  document.querySelectorAll('.watermelon').forEach(melon => {
+    setInterval(() => {
+      const dx = (Math.random() - 0.5) * 1.5;
+      const dy = (Math.random() - 0.5) * 1.5;
+      const rot = (Math.random() - 0.5) * 0.8;
+      melon.style.transform = `translate(${dx}px, ${dy}px) rotate(${rot}deg)`;
+    }, 1800 + Math.random() * 1200);
+  });
 
-    const modal = document.getElementById('modal');
-    const modalImg = document.getElementById('modalImg');
-    const modalText = document.getElementById('modalText');
-    const modalCaption = document.getElementById('modalCaption');
-    const modalDate = document.getElementById('modalDate');
-    const closeBtn = document.getElementById('closeBtn');
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modalImg');
+  const modalText = document.getElementById('modalText');
+  const modalCaption = document.getElementById('modalCaption');
+  const modalDate = document.getElementById('modalDate');
+  const closeBtn = document.getElementById('closeBtn');
 
-    document.querySelectorAll('.watermelon').forEach(item => {
-      item.addEventListener('click', () => {
+  let typingTimeout; // to stop previous typing when switching cards
+
+  // 💗 Typewriter effect
+  function typeWriter(element, text, speed = 28) {
+    clearTimeout(typingTimeout);
+    element.textContent = "";
+    let i = 0;
+
+    function type() {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i++;
+        typingTimeout = setTimeout(type, speed);
+      }
+    }
+
+    type();
+  }
+
+  document.querySelectorAll('.watermelon').forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.add('opening');
+
+      setTimeout(() => {
+        item.classList.remove('opening');
+
+        // Show modal
         modalImg.src = item.dataset.img;
-        modalText.textContent = item.dataset.text;
         modalCaption.textContent = item.dataset.caption;
         modalDate.textContent = item.dataset.date;
         modal.classList.add('active');
 
-        // floating petals/hearts
-        for (let i = 0; i < 10; i++) {
-          const heart = document.createElement('div');
-          heart.className = 'heart';
-          heart.textContent = ['🌸','💖','🌸','💞','🌸'][Math.floor(Math.random()*5)];
-          heart.style.left = (50 + (Math.random()*40 - 20)) + '%';
-          heart.style.bottom = '30%';
-          document.body.appendChild(heart);
-          setTimeout(() => heart.remove(), 2500);
+        // ✨ Type the text instead of instant show
+        typeWriter(modalText, item.dataset.text);
+
+        // 🍉 Floating emojis
+        for (let i = 0; i < 12; i++) {
+          const petal = document.createElement('div');
+          petal.className = 'heart';
+          petal.textContent = '🍉';
+          petal.style.left = (50 + (Math.random()*40 - 20)) + '%';
+          petal.style.bottom = '30%';
+          document.body.appendChild(petal);
+          setTimeout(() => petal.remove(), 2500);
         }
-      });
+      }, 500);
     });
+  });
 
-    closeBtn.addEventListener('click', () => modal.classList.remove('active'));
-    modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
+  // Close modal
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+    clearTimeout(typingTimeout);
+  });
 
-    // ===== Music autoplay fix (plays after first user interaction) =====
-    const bgm = document.getElementById('bgm');
-    const btn = document.getElementById('musicBtn');
-    const hint = document.getElementById('tapHint');
-
-    // Show hint initially
-    hint.classList.add('show');
-
-    function enableMusicOnce() {
-      bgm.play().then(() => {
-        hint.classList.remove('show');
-      }).catch(() => {});
-
-      document.removeEventListener('click', enableMusicOnce);
-      document.removeEventListener('touchstart', enableMusicOnce);
-      document.removeEventListener('keydown', enableMusicOnce);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('active');
+      clearTimeout(typingTimeout);
     }
+  });
 
-    // Wait for first interaction
-    document.addEventListener('click', enableMusicOnce);
-    document.addEventListener('touchstart', enableMusicOnce);
-    document.addEventListener('keydown', enableMusicOnce);
+  // ===== Music autoplay fix =====
+  const bgm = document.getElementById('bgm');
+  const btn = document.getElementById('musicBtn');
+  const hint = document.getElementById('tapHint');
 
-    // Manual toggle
-    btn.onclick = () => {
-      if (bgm.paused) {
-        bgm.play();
-        btn.textContent = '🔊 Music';
-      } else {
-        bgm.pause();
-        btn.textContent = '🔇 Muted';
-      }
-    };
-  </script>
+  hint.classList.add('show');
+
+  function enableMusicOnce() {
+    bgm.play().then(() => { hint.classList.remove('show'); }).catch(()=>{});
+    document.removeEventListener('click', enableMusicOnce);
+    document.removeEventListener('touchstart', enableMusicOnce);
+    document.removeEventListener('keydown', enableMusicOnce);
+  }
+
+  document.addEventListener('click', enableMusicOnce);
+  document.addEventListener('touchstart', enableMusicOnce);
+  document.addEventListener('keydown', enableMusicOnce);
+
+  btn.onclick = () => {
+    if (bgm.paused) {
+      bgm.play();
+      btn.textContent = '🔊 Music';
+    } else {
+      bgm.pause();
+      btn.textContent = '🔇 Muted';
+    }
+  };
+</script>
+
 </body>
 </html>
